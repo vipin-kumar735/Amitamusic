@@ -1,5 +1,5 @@
 <h2 align="center">
-  ❣  𝐉𝐚𝐧𝐧𝐯𝐢 𝐌𝐮𝐬𝐢𝐜 [ Sᴜᴘᴇʀ ʙᴏᴛ ] ❣
+  ❣  𝐀𝐌𝐈𝐓𝐀 𝐌𝐔𝐒𝐈𝐂 [ Sᴜᴘᴇʀ ʙᴏᴛ ] ❣
 </h2>
 
 <h3 align="center">
@@ -13,7 +13,7 @@
 </p>
 
 <h4 align="center">
-    jaanvi music
+    𝐀𝐌𝐈𝐓𝐀 𝐌𝐔𝐒𝐈𝐂
 </h4>
 
 
