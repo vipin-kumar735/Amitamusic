@@ -77,6 +77,7 @@ def aq_markup(_, chat_id):
             ),
             
         ],
+        [InlineKeyboardButton(text="🥂  ᴀᴅᴅ ᴍᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ 🥂", url=f"https://t.me/Amitamusicbot?startgroup=s&admin=delete_messages+manage_video_chats+pin_messages+invite_users")],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="🍬 𝐂𝐋𝐎𝐒𝐄 🍬")],
     ]
     return buttons
