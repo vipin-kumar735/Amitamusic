@@ -87,14 +87,14 @@ def stream_markup(_, videoid, chat_id):
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
-        [
-            InlineKeyboardButton(
-                text="🥀 ᴏᴡɴᴇʀ 🥀", url=f"https://t.me/Vip_chor"
-            ),
-            InlineKeyboardButton(
-                text="🥀 ᴄʜᴀᴛ 🥀", url=f"https://t.me/+SFB9vAp52SAxZGE1"
-            ),
-        ],
+      #  [
+         #   InlineKeyboardButton(
+               # text="🥀 ᴏᴡɴᴇʀ 🥀", url=f"https://t.me/Vip_chor"
+           # ),
+            #InlineKeyboardButton(
+              #  text="🥀 ᴄʜᴀᴛ 🥀", url=f"https://t.me/+SFB9vAp52SAxZGE1"
+          #  ),
+       # ],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
     return buttons
@@ -242,14 +242,14 @@ def stream_markup2(_, chat_id):
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
-[
-            InlineKeyboardButton(
-                text="🥀 ᴏᴡɴᴇʀ 🥀", url=f"https://t.me/Vip_chor"
-            ),
-            InlineKeyboardButton(
-                text="🥀 ᴄʜᴀᴛ 🥀", url=f"https://t.me/+SFB9vAp52SAxZGE1"
-            ),
-        ],
+# [
+           # InlineKeyboardButton(
+             #   text="🥀 ᴏᴡɴᴇʀ 🥀", url=f"https://t.me/Vip_chor"
+          #  ),
+          #  InlineKeyboardButton(
+           #     text="🥀 ᴄʜᴀᴛ 🥀", url=f"https://t.me/+SFB9vAp52SAxZGE1"
+           # ),
+      #  ],
 
         [
             InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close"),
