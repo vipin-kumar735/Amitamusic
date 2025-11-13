@@ -5,7 +5,7 @@ from pyrogram import idle
 
 import config
 from PURVIMUSIC import LOGGER, app, userbot
-from PURVIMUSIC.core.call import PURVI
+from PURVIMUSIC.core.call import Ananya
 from PURVIMUSIC.misc import sudo
 from PURVIMUSIC.plugins import ALL_MODULES
 from PURVIMUSIC.utils.database import get_banned_users, get_gbanned
