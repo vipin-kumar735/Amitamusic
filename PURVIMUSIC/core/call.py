@@ -33,7 +33,7 @@ from PURVIMUSIC.utils.database import (
 )
 from PURVIMUSIC.utils.exceptions import AssistantErr
 from PURVIMUSIC.utils.formatters import check_duration, seconds_to_min, speed_converter
-from PURVIMUSIC.utils.inline.play import stream_markup
+from PURVIMUSIC.utils.inline.play import stream_markup, telegram_markup
 from PURVIMUSIC.utils.stream.autoclear import auto_clean
 from PURVIMUSIC.utils.thumbnails import get_thumb
 from strings import get_string
@@ -51,7 +51,7 @@ async def _clear_(chat_id):
 class Call(PyTgCalls):
     def __init__(self):
         self.userbot1 = Client(
-            name="PURVIAss1",
+            name="AnanyaAss1",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING1),
@@ -61,7 +61,7 @@ class Call(PyTgCalls):
             cache_duration=100,
         )
         self.userbot2 = Client(
-            name="PURVIAss2",
+            name="AnanyaAss2",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING2),
@@ -71,7 +71,7 @@ class Call(PyTgCalls):
             cache_duration=100,
         )
         self.userbot3 = Client(
-            name="PURVIAss3",
+            name="AnanyaXAss3",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING3),
@@ -81,7 +81,7 @@ class Call(PyTgCalls):
             cache_duration=100,
         )
         self.userbot4 = Client(
-            name="PURVIAss4",
+            name="AnanyaXAss4",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING4),
@@ -91,7 +91,7 @@ class Call(PyTgCalls):
             cache_duration=100,
         )
         self.userbot5 = Client(
-            name="PURVIAss5",
+            name="AnanyaAss5",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_string=str(config.STRING5),
@@ -392,7 +392,7 @@ class Call(PyTgCalls):
                         text=_["call_6"],
                     )
                 img = await get_thumb(videoid)
-                button = stream_markup(_, chat_id)
+                button = telegram_markup(_, chat_id)
                 run = await app.send_photo(
                     chat_id=original_chat_id,
                     photo=img,
@@ -416,9 +416,17 @@ class Call(PyTgCalls):
                         video=True if str(streamtype) == "video" else False,
                     )
                 except:
-                    return await mystic.edit_text(
-                        _["call_6"], disable_web_page_preview=True
-                    )
+                    try:
+                        file_path, direct = await YTB.download(
+                            videoid,
+                            mystic,
+                            videoid=True,
+                            video=True if str(streamtype) == "video" else False,
+                        )
+                    except:
+                        return await mystic.edit_text(
+                            _["call_6"], disable_web_page_preview=True
+                        )
                 if video:
                     stream = AudioVideoPiped(
                         file_path,
@@ -438,7 +446,7 @@ class Call(PyTgCalls):
                         text=_["call_6"],
                     )
                 img = await get_thumb(videoid)
-                button = stream_markup(_, chat_id)
+                button = stream_markup(_, videoid, chat_id)
                 await mystic.delete()
                 run = await app.send_photo(
                     chat_id=original_chat_id,
@@ -470,7 +478,7 @@ class Call(PyTgCalls):
                         original_chat_id,
                         text=_["call_6"],
                     )
-                button = stream_markup(_, chat_id)
+                button = telegram_markup(_, chat_id)
                 run = await app.send_photo(
                     chat_id=original_chat_id,
                     photo=config.STREAM_IMG_URL,
@@ -499,12 +507,14 @@ class Call(PyTgCalls):
                         text=_["call_6"],
                     )
                 if videoid == "telegram":
-                    button = stream_markup(_, chat_id)
+                    button = telegram_markup(_, chat_id)
                     run = await app.send_photo(
                         chat_id=original_chat_id,
-                        photo=config.TELEGRAM_AUDIO_URL
-                        if str(streamtype) == "audio"
-                        else config.TELEGRAM_VIDEO_URL,
+                        photo=(
+                            config.TELEGRAM_AUDIO_URL
+                            if str(streamtype) == "audio"
+                            else config.TELEGRAM_VIDEO_URL
+                        ),
                         caption=_["stream_1"].format(
                             config.SUPPORT_CHAT, title[:23], check[0]["dur"], user
                         ),
@@ -513,7 +523,7 @@ class Call(PyTgCalls):
                     db[chat_id][0]["mystic"] = run
                     db[chat_id][0]["markup"] = "tg"
                 elif videoid == "soundcloud":
-                    button = stream_markup(_, chat_id)
+                    button = telegram_markup(_, chat_id)
                     run = await app.send_photo(
                         chat_id=original_chat_id,
                         photo=config.SOUNCLOUD_IMG_URL,
@@ -526,7 +536,7 @@ class Call(PyTgCalls):
                     db[chat_id][0]["markup"] = "tg"
                 else:
                     img = await get_thumb(videoid)
-                    button = stream_markup(_, chat_id)
+                    button = stream_markup(_, videoid, chat_id)
                     run = await app.send_photo(
                         chat_id=original_chat_id,
                         photo=img,
@@ -598,4 +608,4 @@ class Call(PyTgCalls):
             await self.change_stream(client, update.chat_id)
 
 
-PURVI = Call()
+Ananya = Call()
