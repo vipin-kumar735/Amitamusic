@@ -79,7 +79,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 text="🌺 𝐌ᴀɢɪᴄ 🌺 ", url="https://t.me/Amitamusicbot?start",
             ),
             InlineKeyboardButton(
-                text="🌸 𝐆ɪғᴛ 🌸", url="https://t.me/Shonav3_bot?startgroup=true",
+                text="🌺Uᴘᴅᴀᴛᴇ🌺", url="https://t.me/TEAM_CHOR",
             )
         ],
          [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
@@ -99,10 +99,10 @@ def stream_markup(_, videoid, chat_id):
          ],
         [
             InlineKeyboardButton(
-                text="🌺 𝐌ᴀɢɪᴄ 🌺", url="https://t.me/Shonav3_bot?start",
+                text="🌺 𝐌ᴀɢɪᴄ 🌺", url="https://t.me/Amitamusicbot?start",
             ),
             InlineKeyboardButton(
-                text="🌸 𝐆ɪғᴛ 🌸", url="https://t.me/Shonav3_bot?startgroup=true",
+                text="🌺Uᴘᴅᴀᴛᴇ🌺", url="https://t.me/TEAM_CHOR",
             )
         ],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
