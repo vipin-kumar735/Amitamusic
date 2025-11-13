@@ -12,7 +12,7 @@ git()
 dbb()
 heroku()
 
-app = Ananya()
+app = PURVI()
 api = SafoneAPI()
 userbot = Userbot()
 
