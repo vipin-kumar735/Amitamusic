@@ -1,4 +1,4 @@
-from PURVIMUSIC.core.bot import Ananya
+from PURVIMUSIC.core.bot import PURVI
 from PURVIMUSIC.core.dir import dirr
 from PURVIMUSIC.core.git import git
 from PURVIMUSIC.core.userbot import Userbot
@@ -12,7 +12,7 @@ git()
 dbb()
 heroku()
 
-app = Ananya()
+app = PURVI()
 api = SafoneAPI()
 userbot = Userbot()
 
