@@ -1,4 +1,4 @@
-# 𝗣𝗨𝗥𝗩𝗜-𝗠𝗨𝗦𝗜𝗖
+# Vip chor
 <h1 align="center"
  
 ### 🚩🚩 जय बजरंग बली 🚩🚩
@@ -14,7 +14,6 @@
 
 ![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=TEAMPURVI&repo=PURVI_MUSIC&theme=flag-india)
 
-[![GIF](https://github.com/TEAMPURVI/PURVI_MUSIC/blob/main/TEAMPURVI.gif)](https://github.com/TEAMPURVI)
   
 
 
